@@ -12,4 +12,10 @@ node default {
 
   Exec["apt-update"] -> Package <| |>
 
+  class  { 'java':
+    distribution => 'jdk',
+    version      => 'latest',
+  }
+  ->
+  class  { 'activemq': }
 }

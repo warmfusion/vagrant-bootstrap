@@ -1,0 +1,13 @@
+FORGE
+  remote: http://forge.puppetlabs.com
+  specs:
+    puppetlabs-activemq (0.3.1)
+      puppetlabs-java (>= 0.1.0)
+      puppetlabs-stdlib (>= 0.1.6)
+    puppetlabs-java (1.2.0)
+      puppetlabs-stdlib (>= 2.4.0)
+    puppetlabs-stdlib (4.3.2)
+
+DEPENDENCIES
+  puppetlabs-activemq (= 0.3.1)
+
