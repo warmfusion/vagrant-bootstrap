@@ -1,3 +1,4 @@
 forge 'http://forge.puppetlabs.com'
 
-mod 'puppetlabs/activemq', '0.3.1'
+mod 'example42/activemq'
+mod 'example42/apt'

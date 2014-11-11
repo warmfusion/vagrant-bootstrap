@@ -12,10 +12,9 @@ node default {
 
   Exec["apt-update"] -> Package <| |>
 
-  class  { 'java':
-    distribution => 'jdk',
-    version      => 'latest',
+  class  { 'activemq': 
+  	install        => 'source',
+  	install_source => 'http://archive.apache.org/dist/activemq/apache-activemq/5.8.0/apache-activemq-5.8.0-bin.tar.gz',
+  	version        => '5.8.0',
   }
-  ->
-  class  { 'activemq': }
 }
