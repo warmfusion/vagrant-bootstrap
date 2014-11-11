@@ -32,8 +32,8 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
 
   # So you want to have a bunch of vm's? no worries...
   (1..3).each do |i|
-    config.vm.define "node#{i}" do |node|
-      node.vm.hostname = "node#{i}.tobyjackson.net"
+    config.vm.define "amq#{i}" do |node|
+      node.vm.hostname = "amq#{i}.tobyjackson.net"
       node.vm.network "private_network", ip: "192.168.33.1#{i}"
     end
   end
