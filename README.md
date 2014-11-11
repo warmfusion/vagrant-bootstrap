@@ -1,0 +1,1 @@
+This project holds a basic bootstrap for a multi-node service environment that uses hiera for its configuration.
