@@ -84,11 +84,16 @@
             http://activemq.apache.org/multicast-transport-reference.html
         -->
         <networkConnectors>
-          <networkConnector uri="multicast://default"
-            dynamicOnly="true"
-            networkTTL="3"
-            prefetchSize="1"
-            decreaseNetworkConsumerPriority="true" />
+            <networkConnector name="amq2-static" duplex="true" uri="static:(tcp://192.168.33.12:61616)">
+                    <dynamicallyIncludedDestinations>
+                            <topic physicalName="outgoing.amq2-static" />
+                    </dynamicallyIncludedDestinations>
+            </networkConnector>
+            <networkConnector name="amq3-static" duplex="true" uri="static:(tcp://192.168.33.13:61616)">
+                    <dynamicallyIncludedDestinations>
+                            <topic physicalName="outgoing.amq3-static" />
+                    </dynamicallyIncludedDestinations>
+            </networkConnector>
         </networkConnectors>
 
         <!--
