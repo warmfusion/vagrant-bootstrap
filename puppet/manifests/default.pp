@@ -16,5 +16,6 @@ node default {
   	install        => 'source',
   	install_source => 'http://archive.apache.org/dist/activemq/apache-activemq/5.8.0/apache-activemq-5.8.0-bin.tar.gz',
   	version        => '5.8.0',
+  	template       => '/vagrant/puppet/fileserver/activemq/activemq-template.xml.erb'
   }
 }
